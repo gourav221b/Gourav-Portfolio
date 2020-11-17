@@ -1,0 +1,301 @@
+@import"/css/fonts.css";
+:root {
+    --primary-color: #1e2131;
+    --secondary-color: rgb(32, 178, 170);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    /* background: #151515; */
+    height: 80px;
+    width: 100vw;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 120;
+    top: 0;
+    right: 0;
+    background-color: #151515;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 9px;
+}
+
+#resume {
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+#resume:hover {
+    color: rgb(32, 178, 170);
+}
+
+.sidenav a:hover,
+.closebtn:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sociallinks {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 11px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.hamMenu {
+    position: fixed;
+    right: 5%;
+    top: 20px;
+    width: 55px;
+    height: 55px;
+    z-index: 2;
+    transition: all 0.5s ease;
+    /* border: 2px solid #000000; */
+}
+
+#openNav,
+#openNav::before,
+#openNav::after {
+    content: ' ';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#openNav {
+    margin: 50% 25%;
+}
+
+#openNav::before {
+    transform: translateY(-10px);
+}
+
+#openNav::after {
+    transform: translateY(10px);
+}
+
+
+/* ---- particles.js container ---- */
+
+.canvas {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e2131;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.headerText {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    font-size: 30px;
+    color: #ffff;
+    font-family: 'Raleway', sans-serif;
+    top: 25vh;
+    text-align: center;
+}
+
+.headerText>p>span {
+    color: var(--secondary-color);
+}
+
+.homebtns {
+    display: flex;
+}
+
+.homebtn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    margin: 20px 20px;
+    border: 1px solid#fff;
+    padding: 12px 20px 12px 20px;
+}
+
+.homebtn:hover,
+.homebtn:focus {
+    background: #039297;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.right-arrow {
+    transition: all 0.35s ease-in-out;
+}
+
+.homebtn:hover .right-arrow {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.about {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    margin-top: 70vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.section-head {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+
+.section-head>h2 {
+    font-size: 40px;
+}
+
+.blockslider {
+    height: 6px;
+    width: 80px;
+    background: var(--primary-color);
+    margin-top: 12px;
+}
+
+.skillRow {
+    position: relative;
+    display: flex;
+    width: 90vw;
+    margin: 60px 5vw;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-evenly;
+}
+
+.skillicon {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 130px;
+    height: 130px;
+    content: ' ';
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon>img {
+    width: 60%;
+    height: auto;
+}
+
+.skilltext {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: #151515;
+    width: 70%;
+}
+
+.oneWord {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width:480px) {
+    .headerText {
+        font-size: 26px;
+    }
+    .homebtn {
+        font-size: 16px;
+    }
+    .skillicon {
+        width: 47%;
+    }
+    .skilltext {
+        width: 100%;
+        font-size: 12px;
+    }
+    .oneWord {
+        font-size: 16px;
+    }
+    .icon {
+        width: 90px;
+        height: 90px;
+    }
+}
